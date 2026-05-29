@@ -1,7 +1,7 @@
 """
 domain_scorers/shock_delivery.py
 ---------------------------------
-Scores the Shock Delivery domain (20 pts max, weight = 20%).
+Scores the Shock Delivery domain (15 pts max, weight = 15%).
 
 Data sources:
   - FSM findings filtered by domain = "shock_delivery"
@@ -60,8 +60,8 @@ class ShockDeliveryScorer(BaseDomainScorer):
 
     domain_key   = "shock_delivery"
     domain_label = "Shock Delivery"
-    max_points   = 20.0
-    weight       = 0.20
+    max_points   = 15.0
+    weight       = 0.15
 
     def compute(
         self,

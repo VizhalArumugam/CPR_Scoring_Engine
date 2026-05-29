@@ -1,7 +1,7 @@
 """
 domain_scorers/drug_admin.py
 -----------------------------
-Scores the Drug Administration domain (20 pts max, weight = 20%).
+Scores the Drug Administration domain (15 pts max, weight = 15%).
 
 Data sources:
   - FSM findings filtered by domain = "drug_administration"
@@ -64,8 +64,8 @@ class DrugAdminScorer(BaseDomainScorer):
 
     domain_key   = "drug_administration"
     domain_label = "Drug Administration"
-    max_points   = 20.0
-    weight       = 0.20
+    max_points   = 15.0
+    weight       = 0.15
 
     def compute(
         self,

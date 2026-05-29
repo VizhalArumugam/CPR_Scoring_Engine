@@ -5,6 +5,7 @@ from .drug_admin import DrugAdminScorer
 from .rhythm_recognition import RhythmRecognitionScorer
 from .team_leadership import TeamLeadershipScorer
 from .team_communication import TeamCommunicationScorer
+from .reversible_causes import ReversibleCausesScorer
 
 __all__ = [
     "CprQualityScorer",
@@ -13,4 +14,5 @@ __all__ = [
     "RhythmRecognitionScorer",
     "TeamLeadershipScorer",
     "TeamCommunicationScorer",
+    "ReversibleCausesScorer",
 ]

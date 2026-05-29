@@ -41,6 +41,7 @@ from scoring.domain_scorers.rhythm_recognition import RhythmRecognitionScorer
 from scoring.domain_scorers.shock_delivery import ShockDeliveryScorer
 from scoring.domain_scorers.team_communication import TeamCommunicationScorer
 from scoring.domain_scorers.team_leadership import TeamLeadershipScorer
+from scoring.domain_scorers.reversible_causes import ReversibleCausesScorer
 from scoring.grade_mapper import GradeMapper
 from scoring.schemas.event_schema import (
     DataCompletenessFlag,
@@ -63,12 +64,13 @@ class ScoringEngine:
     def __init__(self, scoring_config: dict = None):
         self.config = scoring_config or {}
 
-        # Instantiate all 6 domain scorers
+        # Instantiate all 7 domain scorers (ordered by clinical workflow)
         self.scorers = [
             CprQualityScorer(self.config),
             ShockDeliveryScorer(self.config),
             DrugAdminScorer(self.config),
             RhythmRecognitionScorer(self.config),
+            ReversibleCausesScorer(self.config),
             TeamLeadershipScorer(self.config),
             TeamCommunicationScorer(self.config),
         ]
